@@ -51,6 +51,8 @@ function Seat() {
     },
   ];
   useEffect(()=>{
+    console.log(window.screen.width)
+    console.log(window.screen.height)
     const spans= document.getElementsByTagName('span');
     for (let i = 0; i < spans.length; i++) {
       if(spans[i].getAttribute('name')==='A0'|| 
@@ -88,7 +90,7 @@ function Seat() {
     }
   }
   return (
-    <div className="text-light con">
+    <div className="text-light con" style={{height:"580px"}}>
       {seats.map((item) => {
         return (
           <div className="row">
