@@ -1,0 +1,41 @@
+@keyframes skeleton {
+    0%{
+        background-color: hsl(204, 43%, 70%);
+    }
+    100%{
+        background-color: hsl(201, 62%, 29%);
+    }
+}
+.skeleton{
+    animation: skeleton 0.8s linear infinite alternate;
+}
+.img{
+    height: 500px;
+    width: 30%;
+    margin-left:100px;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+.title{
+    height: 50px;
+    width: 500px;
+}
+.genras{
+    height: 30px;
+    width: 50px;
+    margin: 10px;
+}
+span{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+.bookbtn{
+    height: 30px;
+    width: 150px;
+    margin-top: 20px; 
+}
+.desc{
+    height: 30px;
+    width: 500px;
+}
