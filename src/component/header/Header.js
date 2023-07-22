@@ -5,30 +5,19 @@ import "./Header.css"
 
 const Header = () => {
   let location=useLocation();
-  // const {setSearch,search}=useContext(MovieContext)
-  // const [query,setQuery]=useState("")
-  // let setValue=(e)=>{
-  //    setQuery(e.target.value)
-  // }
-  // let newsearch=()=>{
-  //   setSearch(search+1)
-  // }
+  console.log(location)
   return (
     <div style={{marginBottom:"50px"}}>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark" style={{backgroundColor:"rgb(1,25,40)"}}>
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">MOVIE HUB</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    <img src="https://www-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=31536000&url=https%3A%2F%2Fmoviesmod.one%2Fwp-content%2Fuploads%2F2022%2F12%2Fmoviesmodnew-Custom.png"
+         alt="Logo"
+         />
+    <div className="collapse navbar-collapse">
+      <ul className="navbar-nav me-auto mb-2 " style={{marginLeft:"80px"}}>
         <li className="nav-item">
-          <Link className={`nav-link ${(location.pathname==="/"  || location.pathname==="/login"  || location.pathname==="/singin")?"active":""}`} aria-current="page" to="/">Home</Link>
+          <Link className={`nav-link ${(location.pathname==="/"  || location.key==="hwugaqm2"  || location.pathname==="/locationTime" || location.pathname==="/seat")?"active":""}`} to="/">Home</Link>
         </li>
-        {/* <li className="nav-item">
-          <Link className={`nav-link ${(location.pathname==="/payment" || location.pathname==="/movie" || location.pathname==="/movietime" || location.pathname==="/movieseat")?"active":""}`} aria-current="page" to="/movies">Movie</Link>
-        </li> */}
         <li className="nav-item">
           <Link className={`nav-link ${(location.pathname==="/about")?"active":""}`} to="/about">About Us</Link>
         </li>
@@ -36,9 +25,9 @@ const Header = () => {
           <Link className={`nav-link ${(location.pathname==="/contact")?"active":""}`} to="/contact">Contact Us</Link>
         </li>
       </ul>
-      <div className="d-flex">
-        <input className="form-control me-2"  type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" >Search</button>
+      <div className="d-flex mx-5">
+         <Link className="btn btn-outline-success mx-2" to="/login">Login</Link>
+         <Link className="btn btn-outline-primary mx-2">SingIn</Link>
       </div>
     </div>
   </div>

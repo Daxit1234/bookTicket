@@ -1,0 +1,44 @@
+.main{
+    background-image: url("../../images/background\ 1.jpg");
+    height: 610px;
+    background-size: cover;
+    display: flex;
+    justify-content: right;
+}
+.outer{
+    height: 450px;
+    width: 380px;
+    margin-right: 10rem;
+    margin-top: 7rem;
+    box-shadow: 0px 0px 100px 1px #cd2f32;
+    border-radius: 4rem;
+}
+.head{
+    text-align: center;
+    color: white;
+}
+#lb{
+    color: aliceblue;
+    margin: 10px 0;
+}
+form{
+    margin: 4rem;
+    margin-top: 2rem;
+}
+input{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(155, 188, 218);
+}   
+.btn2{
+    margin-top: 40px;
+    border-radius: 10px;
+}
+p{
+    color: blue;
+    font-size: 1.2rem;
+    text-align: center;
+    /* margin: 5rem; */
+    margin-top: -2.5rem;
+}

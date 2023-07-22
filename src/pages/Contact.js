@@ -4,8 +4,6 @@ function Contact() {
   return (
     <>
     <div style={{height:"650px",width:"98%"}}>
-
-    <h1 className='text-center  text-light'>CONTECT US</h1>
       <div className='row' style={{marginTop:"5rem",marginLeft:"8rem"}}>
       <div className="card text-light col-4 mx-5 w-25" style={{ width: "18rem",backgroundColor:"rgb(4,21,45)" }}>
       <i style={{fontSize:'5rem'}} className="fa-solid fa-phone text-center text-warning"></i>
