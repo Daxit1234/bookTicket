@@ -1,4 +1,4 @@
-import React,{useContext, useState} from "react";
+import React,{useContext, useState,useEffect} from "react";
 import "./Seat.css";
 import MovieContext from "../../context/Moviecontext";
 
@@ -10,47 +10,64 @@ function Seat() {
     {
       row: "A",
       seatNo: [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+        1, 2, 3, 4,0,5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16,
       ],
     },
     {
       row: "B",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "C",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "D",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "E",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "F",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "G",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "H",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "I",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
     {
       row: "J",
-      seatNo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      seatNo: [1, 2, 3, 4,0, 5, 6, 7, 8, 9, 10, 11, 12,0,13, 14, 15, 16],
     },
   ];
-
+  useEffect(()=>{
+    const spans= document.getElementsByTagName('span');
+    for (let i = 0; i < spans.length; i++) {
+      if(spans[i].getAttribute('name')==='A0'|| 
+          spans[i].getAttribute('name')==='B0' ||
+          spans[i].getAttribute('name')==='C0'||
+          spans[i].getAttribute('name')==='D0'||
+          spans[i].getAttribute('name')==='E0'||
+          spans[i].getAttribute('name')==='F0'||
+          spans[i].getAttribute('name')==='G0'||
+          spans[i].getAttribute('name')==='H0'||
+          spans[i].getAttribute('name')==='I0'||
+          spans[i].getAttribute('name')==='J0'){
+           spans[i].style.width="100px"
+           spans[i].style.visibility="hidden"
+      }
+    }
+  },[])
   let selected=(e)=>{
     if(status){
       e.target.style.backgroundColor="";
@@ -61,7 +78,6 @@ function Seat() {
       setDetails({...details,seat:[...details.seat,temp]})
       setStatus(true)
     }
-    console.log(details)
   }
   let handleBooking=()=>{
     booking()
@@ -80,12 +96,6 @@ function Seat() {
             {item.seatNo.map((e) => {
               return (
                 <>
-                  {/* <input
-                    type="checkbox"
-                    className="form-check-input col chk"
-                    name={item.row + e}
-                    id=""
-                  /> */}
                     <span className="chk" onClick={selected} name={item.row + e}>{item.row }<br />{ e}</span>
                 </>
               );

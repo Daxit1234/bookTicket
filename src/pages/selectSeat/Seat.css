@@ -15,11 +15,12 @@
 }
 .con{
     margin-top: 100px;
-    margin-left: 300px;
+    margin-left: 100px;
+    
 }
 .btn1{
     position: relative;
-    left: 380px;
+    left: 520px;
     top: 10px;
 }
 .btn1 button{

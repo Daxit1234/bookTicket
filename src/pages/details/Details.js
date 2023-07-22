@@ -12,9 +12,8 @@ function Details() {
   const { imdbid } = useParams();
   const { data, loading } = useFetch(`gettitleDetails?imdbid=${imdbid}`);
   const navigate=useNavigate();
-  const {setMovie,details,setDetails}=useContext(MovieContext);
+  const {details,setDetails}=useContext(MovieContext);
   let SelectTime=()=>{
-    setMovie(data?.title);
     setDetails({...details,movie:data?.title})
     navigate("/locationTime")
   }
