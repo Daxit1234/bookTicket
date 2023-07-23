@@ -1,9 +1,10 @@
 import React from 'react'
 import "./Login.css"
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-    <div className='container-fluid main '>
+    <div className='container-fluid logmain '>
       <div className='outer'>
         <h1 className='head mt-3'>WelCome</h1>
         <form >  
@@ -13,7 +14,7 @@ const Login = () => {
         <input type="text" id='password'placeholder='Enter Password' /> 
         <input className='btn btn-primary btn2' value="login" />
         </form>
-        <p>new register</p>
+        <p className='p'><Link to="/singin">new register</Link> </p>
       </div>
     </div>
   )

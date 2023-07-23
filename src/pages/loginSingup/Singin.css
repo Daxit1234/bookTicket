@@ -1,0 +1,49 @@
+.singmain{
+    background-image: url("../../images/backimage2.png");
+    height: 610px;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+}
+.singouter{
+    height: auto;
+    width: 480px;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    box-shadow: 0px 0px 10px 1px rgb(106, 154, 180);
+    border-radius: 4rem;
+    background:linear-gradient(to left,rgb(0,44,68),rgb(1,13,26))
+}
+.singhead{
+    text-align: center;
+    color: white;
+}
+#slb{
+    color: aliceblue;
+    margin: 10px 0;
+}
+form{
+    margin: 4rem;
+    margin-top: 2rem;
+}
+.input{
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(45, 97, 145);
+    /* border:1px solid red; */
+    /* border-bottom: 2px solid red; */
+}   
+.input::placeholder{
+    color: black;
+}
+.btn2{
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.p{
+    color: blue;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: -2.5rem;
+}

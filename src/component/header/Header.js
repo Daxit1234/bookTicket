@@ -26,8 +26,8 @@ const Header = () => {
         </li>
       </ul>
       <div className="d-flex mx-5">
-         <Link className="btn btn-outline-success mx-2" to="/login">Login</Link>
-         <Link className="btn btn-outline-primary mx-2">SingIn</Link>
+         <Link className="btn btn-outline-success mx-2" to="login">Login</Link>
+         <Link className="btn btn-outline-primary mx-2" to="singin">SingIn</Link>
       </div>
     </div>
   </div>

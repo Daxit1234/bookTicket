@@ -1,5 +1,5 @@
-.main{
-    background-image: url("../../images/background\ 1.jpg");
+.logmain{
+    background-image: url("../../images/backimg1.png");
     height: 610px;
     background-size: cover;
     display: flex;
@@ -10,7 +10,7 @@
     width: 380px;
     margin-right: 10rem;
     margin-top: 7rem;
-    box-shadow: 0px 0px 100px 1px #cd2f32;
+    box-shadow: 0px 0px 10px 1px rgb(44,159,169);
     border-radius: 4rem;
 }
 .head{
@@ -29,16 +29,18 @@ input{
     width: 250px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgb(155, 188, 218);
+    background-color:rgb(45, 97, 145);
 }   
+input::placeholder{
+    color: black;
+}
 .btn2{
     margin-top: 40px;
     border-radius: 10px;
 }
-p{
+.p{
     color: blue;
     font-size: 1.2rem;
     text-align: center;
-    /* margin: 5rem; */
     margin-top: -2.5rem;
 }

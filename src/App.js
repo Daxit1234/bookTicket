@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Moviestate from "./context/MovieState";
 import Login from "./pages/loginSingup/Login";
+import Singin from "./pages/loginSingup/Singin";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='about' element={<About/>} />
            <Route exact path='contact' element={<Contact/>} />
            <Route exact path='login' element={<Login/>} />
+           <Route exact path='singin' element={<Singin/>} />
         </Routes>
       </Router>
       </Moviestate>

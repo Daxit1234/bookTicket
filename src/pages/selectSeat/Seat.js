@@ -51,8 +51,6 @@ function Seat() {
     },
   ];
   useEffect(()=>{
-    console.log(window.screen.width)
-    console.log(window.screen.height)
     const spans= document.getElementsByTagName('span');
     for (let i = 0; i < spans.length; i++) {
       if(spans[i].getAttribute('name')==='A0'|| 
@@ -82,12 +80,11 @@ function Seat() {
     }
   }
   let handleBooking=()=>{
-    booking()
-    // setColor("rgb(4,21,45)")
-   const spans= document.getElementsByTagName('span');
+    const spans= document.getElementsByTagName('span');
     for (let i = 0; i < spans.length; i++) {
       spans[i].style.backgroundColor='rgb(4,21,45)'
     }
+    booking()
   }
   return (
     <div className="text-light con" style={{height:"580px"}}>
@@ -105,6 +102,9 @@ function Seat() {
           </div>
         );
       })}
+      <div className="screen d-flex justify-content-center">
+        <p className="text-light" id="p">Sreen</p>
+      </div>
       <div className="btn1">
       <button onClick={handleBooking}>Book Ticket</button>
       </div>

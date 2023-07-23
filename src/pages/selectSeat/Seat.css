@@ -10,8 +10,7 @@
     line-height: 10px;
 }
 .chk:hover{
-    /* background-color: #00b8f5; */
-    box-shadow: 0px 0px 50px 5px #00b8f5;
+    box-shadow: 0px 0px 10px 1px #00b8f5;
 }
 .con{
     margin-top: 100px;
@@ -34,5 +33,18 @@
 }
 .btn1 button:hover{
     box-shadow: 0px 0px 10px 0px #00b8f5;
-
+}
+.screen{
+    margin-left: 10rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(69, 121, 185);
+    height: 1.3rem;
+    width: 70%;
+    border-radius:0% 0% 100% 100%;
+}
+#p{
+    font-size: large;
+    font-stretch: extra-expanded;
+    margin-top: -4px;
 }
