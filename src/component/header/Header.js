@@ -5,7 +5,6 @@ import "./Header.css"
 
 const Header = () => {
   let location=useLocation();
-  console.log(location)
   return (
     <div style={{marginBottom:"50px"}}>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark" style={{backgroundColor:"rgb(1,25,40)"}}>

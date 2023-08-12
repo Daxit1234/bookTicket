@@ -13,7 +13,7 @@ router.post('/createuser',(req,res)=>{
 })
 
 //ROUTE:2 login user using get:http://localhost:3000/login
-router.get('/login',async(req,res)=>{
+router.post('/login',async(req,res)=>{
     const { email, password } = req.body;
       let user = await User.findOne({ email });
       if (!user) {

@@ -5,8 +5,6 @@ const router=exprees.Router();
 
 //ROUTE:1 add tickets using post:http://localhost:3000/ticket/addticket
 router.post('/addticket',(req,res)=>{
-    // res.send(req.body)
-     console.log(req.body)
     const ticket=Ticket(req.body);
     ticket.save().then(()=>{
         res.send(req.body)
@@ -16,9 +14,9 @@ router.post('/addticket',(req,res)=>{
 })
 
 //ROUTE:2 get user all tickets using get:http://localhost:3000/ticket/getticket
-router.get('/getticket',async(req,res)=>{
-    const { email } = req.body;
-    let tickets=await Ticket.find({email})
+router.get('/getticket/:email',async(req,res)=>{
+    const email = req.params.email;
+    let tickets=await Ticket.find({email:email})
     res.send(tickets)
 })
 

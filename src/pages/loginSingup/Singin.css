@@ -12,7 +12,7 @@
     margin-top: 2rem;
     box-shadow: 0px 0px 10px 1px rgb(106, 154, 180);
     border-radius: 4rem;
-    background:linear-gradient(to left,rgb(0,44,68),rgb(1,13,26))
+   background:linear-gradient(to left,rgb(32, 84, 112),rgb(1,13,26));
 }
 .singhead{
     text-align: center;
@@ -32,6 +32,7 @@ form{
     /* border-radius: 10px; */
     background: transparent;
     border-bottom: 2px solid red;
+    color: white;
 }   
 .input::placeholder{
     color: rgb(253, 246, 246);

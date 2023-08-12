@@ -14,7 +14,7 @@ function Details() {
   const navigate=useNavigate();
   const {details,setDetails}=useContext(MovieContext);
   let SelectTime=()=>{
-    setDetails({...details,movie:data?.title})
+    setDetails({...details,movieName:data?.title})
     navigate("/locationTime")
   }
   return (

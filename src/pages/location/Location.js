@@ -10,7 +10,7 @@ function Location() {
     let stime=e.target.getAttribute("time");
     let sthiator=e.target.getAttribute("thiator");
     let saddress=e.target.getAttribute("address");
-    setDetails({...details,thiator:sthiator,address:saddress,time:stime})
+    setDetails({...details,thiatorName:sthiator,address:saddress,time:stime})
     navigate("/seat");
   };
   return (

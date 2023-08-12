@@ -16,15 +16,15 @@ const TicketSchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    thiatorAdd:{
+    address:{
         type:String,
         require:true
     },
-    showTime:{
+    time:{
         type:String,
         require:true
     },
-    seats:{
+    seat:{
         type:Array,
         require:true,
         default:[]
