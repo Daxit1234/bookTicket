@@ -10,6 +10,9 @@ import Contact from "./pages/Contact";
 import Moviestate from "./context/MovieState";
 import Login from "./pages/loginSingup/Login";
 import Singin from "./pages/loginSingup/Singin";
+import BookedTikets from "./pages/BookedTikets/BookedTikets";
+import AllTickets from "./pages/Admin/AllTickets";
+import AllUsers from "./pages/Admin/AllUsers";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
            <Route exact path='contact' element={<Contact/>} />
            <Route exact path='login' element={<Login/>} />
            <Route exact path='singin' element={<Singin/>} />
+           <Route exact path='bookedTikets' element={<BookedTikets/>} />
+           <Route exact path='allTickets' element={<AllTickets/>} />
+           <Route exact path='Users' element={<AllUsers/>} />
         </Routes>
       </Router>
       </Moviestate>

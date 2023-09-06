@@ -1,10 +1,12 @@
 import React,{useContext, useState,useEffect} from "react";
 import "./Seat.css";
 import MovieContext from "../../context/Moviecontext";
+import { useNavigate } from "react-router-dom";
 
 function Seat() {
   const {booking,details,setDetails} = useContext(MovieContext);
   const [status,setStatus]=useState(false);
+  const navigate=useNavigate()
   // const [color,setColor]=useState("")
   let seats = [
     {
@@ -80,11 +82,16 @@ function Seat() {
     }
   }
   let handleBooking=()=>{
-    const spans= document.getElementsByTagName('span');
-    for (let i = 0; i < spans.length; i++) {
-      spans[i].style.backgroundColor='rgb(4,21,45)'
+    if(!localStorage.getItem('userDetails')){
+      navigate("/login")
+    }else{
+      const spans= document.getElementsByTagName('span');
+      for (let i = 0; i < spans.length; i++) {
+        spans[i].style.backgroundColor='rgb(4,21,45)'
+      }
+      booking()
+      navigate("/bookedTikets")
     }
-    booking()
   }
   return (
     <div className="text-light con" style={{height:"580px"}}>

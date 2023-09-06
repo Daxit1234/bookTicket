@@ -20,8 +20,16 @@ const TicketSchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    date:{
+        type:Date,
+        require:true
+    },
     time:{
         type:String,
+        require:true
+    },
+    total:{
+        type:Number,
         require:true
     },
     seat:{

@@ -3,8 +3,8 @@ import SimpleImageSlider from "react-simple-image-slider"
 
 const ImageSlider = () => {
     const slideImages=[
-      {
-        url:"https://docs.madrasthemes.com/vodi/wp-content/uploads/sites/11/2019/02/movies-slider-style-1-output.jpg"
+      { 
+        url:"https://assetscdn1.paytm.com/images/catalog/view_item/1900659/1691737049498.jpg?format=webp"
       },
       {
         url:"https://assetscdn1.paytm.com/images/catalog/view_item/1090214/1686059471956.jpg"

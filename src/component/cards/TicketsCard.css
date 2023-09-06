@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+.tiketBox{
+    background-color: rgb(26, 94, 148);
+    box-shadow: 0 0 5px 5px rgb(30, 102, 161);
+   max-width: 22%; 
+   border-radius: 5%;
+   padding: 1%;
+   margin: 1%;
+}
+.mainTiketBox{
+    margin-top: 5%;
+    max-width: 100%;
+}
+.ttitle{
+    color: rgb(191, 195, 196);
+    margin: -1px;
+}
+#movieName{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    height: 40px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#thiatorName{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    height: 33px;
+    /* border-top: 2px solid black; */
+}
+.dateTime{
+    font-size: 25px;
+}
+.seats{
+    font-size: 20px;
+    font-weight: bold;
+}
+.amount{
+    font-size: 25px;
+    font-weight: bold;
+}

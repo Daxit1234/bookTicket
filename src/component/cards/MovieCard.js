@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from "../images/no-poster.png"
+import img1 from "../../images/no-poster.png"
 import Skeleton from 'react-loading-skeleton';
 import { useNavigate } from 'react-router-dom';
 import "./MovieCard.css"

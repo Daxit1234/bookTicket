@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import MovieContext from "../../context/Moviecontext";
 import { useNavigate } from 'react-router-dom';
 import record from "./movietime.json";
+import MovieDates from "../../component/dates/MovieDates";
 
 function Location() {
   const {details,setDetails} = useContext(MovieContext);
@@ -16,12 +17,14 @@ function Location() {
   return (
     <>
       <div className="container">
+        <MovieDates/>
         <div className="row d-flex justify-content-between">
           {record.results.map((item) => {
             return (
               <div
                 className="card col-4 mx-1"
                 style={{ height: "300px", width: "350px" }}
+                key={item.cinema}
               >
                 <h5 className="card-header bg-dark text-light">
                   {item.cinema}

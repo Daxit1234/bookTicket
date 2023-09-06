@@ -1,13 +1,10 @@
 import React from 'react'
 import useFetch from '../../../hook/useFetch'
-import MovieCard from '../../../component/MovieCard'
-// import MovieContext from '../../../context/Moviecontext'
+import MovieCard from '../../../component/cards/MovieCard'
 import SkeletonItem from '../../../component/Skeleton/Skeleton';
 
 const Latest = () => {
-//   const {search}=useContext(MovieContext);
-//   console.log(search);
-  const {data,loading}=useFetch("advancedsearch")
+  const {data,loading}=useFetch("advancedsearch?page=2")
   return (
     <>
     {

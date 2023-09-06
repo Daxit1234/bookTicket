@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./Singin.css"
 
 const Singin = () => {
   const [user,setUser]=useState({name:"", email: "", password: "",cpassword:"" })
+  const navigate=useNavigate()
   const handlesubmit = async (e) => {
     e.preventDefault();
     const {name,email,password,cpassword}=user
@@ -18,6 +19,8 @@ const Singin = () => {
       const json = await responce.json();
       if (json.code) {
         alert("email id already exist")
+      }else{
+        navigate('/login')
       }
     }else if (password===cpassword) {
       alert("password must be 8 character")  

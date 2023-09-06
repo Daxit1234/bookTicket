@@ -20,11 +20,15 @@ router.get('/getticket/:email',async(req,res)=>{
     res.send(tickets)
 })
 
-//ROUTE:2 delete tickets using get:http://localhost:3000/ticket/delete
+//ROUTE:3 get user all tickets for admin using get:http://localhost:3000/ticket/getallticket
+router.get('/getallticket',async(req,res)=>{
+    let tickets=await Ticket.find()
+    res.send(tickets)
+})
+
+//ROUTE:4 delete tickets using get:http://localhost:3000/ticket/delete
 router.delete('/delete/:id',async(req,res)=>{
     // const { _id } = req.body;
    await Ticket.findByIdAndDelete(req.params.id)
-    let tickets=await Ticket.find()
-    res.send(tickets)
 })
 module.exports=router
