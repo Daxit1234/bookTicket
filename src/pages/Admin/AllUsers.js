@@ -7,11 +7,11 @@ const AllUsers = () => {
   const {users,getUserDetails}=useContext(MovieContext)
   useEffect(() => {
     getUserDetails()
-  },[users]);
+  });
   return(
     <div className="container">
       <h1 className="text-info my-5">Users details</h1>
-      <table class="table table-striped table-dark shadow-lg p-3 mb-5 bg-light rounded">
+      <table className="table table-striped table-dark shadow-lg p-3 mb-5 bg-light rounded">
   <thead>
     <tr>
       <th>No</th>
@@ -26,6 +26,7 @@ const AllUsers = () => {
         users?.map(({_id,name,email},index)=>{
           return(
             <UsersCard
+              key={_id}
               index={index}
               id={_id}
               name={name}

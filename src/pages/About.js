@@ -4,7 +4,7 @@ function About() {
   return (
     <div style={{height:"650px",width:"98%"}}>
     <div className='bg-info d-flex justify-content-center text-light' style={{height:"15rem"}}>
-      <h1 className='mt-5'>ABOUT MOVIEHUB</h1>
+      <h1 className='mt-5'>ABOUT BOOK MOVIESMOD</h1>
     </div>
     <div className='card container' style={{marginTop:"-6rem",width:"1000rem",height:"400px",fontSize:"20px"}}>
       <h3>WHO WE ARE</h3>

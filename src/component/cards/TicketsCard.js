@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import MovieContext from "../../context/Moviecontext";
+import React from "react";
 import "./TicketsCard.css";
 
-function TicketsCrad({
+function TicketsCard({
   _id,
   movieName,
   thiatorName,
@@ -11,16 +10,16 @@ function TicketsCrad({
   address,
   newdate,
   handleDelete,
-  total
+  total,
+  email
 }) {
-  const { getdata, deleteData } = useContext(MovieContext);
   let handledelete=(e)=>{
     let id = e.target.getAttribute("name");
     handleDelete(id)
   }
   // console.log(newdate.toString().slice(8,10))
   return (
-    <div className="tiketBox col-4" key={_id}>
+    <div>
       <div className="d-flex justify-content-between ttitle">
         <p>{_id}</p>
         <div>
@@ -57,13 +56,16 @@ function TicketsCrad({
           return <p className="mx-2 seats">{i}</p>;
         })}
       </div>
+      <p>{email}</p>
       {new Date().toString().slice(8,10) > newdate.toString().slice(8,10) ? (
         <p className="status text-dark text-center bg-danger">expire</p>
       ) : (
         <p className="status text-dark text-center bg-success">Active</p>
       )}
+      
     </div>
+    
   );
 }
 
-export default TicketsCrad;
+export default TicketsCard;

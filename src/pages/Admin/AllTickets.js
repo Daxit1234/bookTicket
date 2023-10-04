@@ -6,7 +6,7 @@ const AllTickets = () => {
     const {deleteData,allTickets,getAllTickets}=useContext(MovieContext)
     useEffect(() => {
         getAllTickets()
-     }, [allTickets]);
+     });
      let handleDelete = (id) => {
         deleteData(id);
         getAllTickets()
@@ -28,19 +28,21 @@ const AllTickets = () => {
         }) => {
           const newdate = new Date(date?.slice(0, 10));
           return (
-            <TicketsCard key={_id}
-            _id={_id}
-            movieName={movieName}
-            thiatorName={thiatorName}
-            seat={seat}
-            time={time}
-            email={email}
-            name={name}
-            address={address}
-            newdate={newdate}
-            total={total}
-            handleDelete={handleDelete}
+            <div key={_id} className="col-4 tiketBox">
+            <TicketsCard 
+              _id={_id}
+              movieName={movieName}
+              thiatorName={thiatorName}
+              seat={seat}
+              time={time}
+              email={email}
+              name={name}
+              address={address}
+              newdate={newdate}
+              total={total}
+              handleDelete={handleDelete}
             />
+          </div>
           );
         }
       )}

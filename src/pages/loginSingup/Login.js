@@ -74,7 +74,7 @@ const Login = () => {
         <label htmlFor="email" id='lb'>Enter Email</label><br />
         <input type="text" id='email' placeholder='Enter Email' onChange={handleonchange} name='email' /><br />
         <label htmlFor="password" id='lb'>Enter Password</label><br />
-        <input type="text" id='password'placeholder='Enter Password' onChange={handleonchange} name='password' /> 
+        <input type="password" id='password'placeholder='Enter Password' onChange={handleonchange} name='password' /> 
         <input type='submit' className='btn btn-primary btn2' value="login" />
         </form>
         <p className='p'><Link to="/singin">new register</Link> </p><br /><br />

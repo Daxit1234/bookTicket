@@ -48,8 +48,8 @@ function Details() {
                 <p className="text1" onClick={SelectTime}>Book Now</p>
             </div>
             <h3 className="text-light mt-4">Overview :</h3>
-            <p className="text">{data?.synopsis}</p>
-            <h3 className="lan">Language : <p className="text">{data?.language[0]}</p></h3>
+            <p className="text">{data?.synopsis ? data?.synopsis :" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia minima dolor quibusdam, assumenda unde fugiat nesciunt molestiae aliquid consequatur asperiores " }</p>
+            <h3 className="lan">Language : <p className="text">{data?.language[0] ? data?.language[0] : "Hindi English"}</p></h3>
           </div>
         </div>:
             <>
