@@ -26,7 +26,7 @@ function TicketsCard({
           <i
             name={_id}
             onClick={handledelete}
-            className="fa-solid fa-trash"
+            className="fa-solid fa-trash "
           ></i>
         </div>
       </div>
